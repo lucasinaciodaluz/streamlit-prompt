@@ -2,10 +2,11 @@ import streamlit as st
 from openai import OpenAI
 import fitz  # PyMuPDF
 import io
+import os
 
 # Configurar a chave da API
 client = OpenAI(
-    api_key="",
+    api_key=os.environ["open_api_key"] ,
 )
 
 # Função para carregar o arquivo
